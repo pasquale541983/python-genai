@@ -1703,7 +1703,7 @@ SpeechConfigUnionDict = Union[SpeechConfigUnion, SpeechConfigDict]
 
 
 class GenerateContentConfig(_common.BaseModel):
-  """Class for configuring optional model parameters.
+  """Optional model configuration parameters.
 
   For more information, see `Content generation parameters
   <https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters>`_.
@@ -1865,7 +1865,7 @@ class GenerateContentConfig(_common.BaseModel):
 
 
 class GenerateContentConfigDict(TypedDict, total=False):
-  """Class for configuring optional model parameters.
+  """Optional model configuration parameters.
 
   For more information, see `Content generation parameters
   <https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters>`_.
@@ -2154,7 +2154,7 @@ CitationOrDict = Union[Citation, CitationDict]
 
 
 class CitationMetadata(_common.BaseModel):
-  """Class for citation information when the model quotes another source."""
+  """Citation information when the model quotes another source."""
 
   citations: Optional[list[Citation]] = Field(
       default=None,
@@ -2166,7 +2166,7 @@ class CitationMetadata(_common.BaseModel):
 
 
 class CitationMetadataDict(TypedDict, total=False):
-  """Class for citation information when the model quotes another source."""
+  """Citation information when the model quotes another source."""
 
   citations: Optional[list[CitationDict]]
   """Contains citation information when the model directly quotes, at
@@ -2559,7 +2559,7 @@ SafetyRatingOrDict = Union[SafetyRating, SafetyRatingDict]
 
 
 class Candidate(_common.BaseModel):
-  """Class containing a response candidate generated from the model."""
+  """A response candidate generated from the model."""
 
   content: Optional[Content] = Field(
       default=None,
@@ -2607,7 +2607,7 @@ class Candidate(_common.BaseModel):
 
 
 class CandidateDict(TypedDict, total=False):
-  """Class containing a response candidate generated from the model."""
+  """A response candidate generated from the model."""
 
   content: Optional[ContentDict]
   """Contains the multi-part content of the response.
@@ -2877,7 +2877,7 @@ GenerateContentResponseOrDict = Union[
 
 
 class EmbedContentConfig(_common.BaseModel):
-  """Class for configuring optional parameters for the embed_content method."""
+  """Optional parameters for the embed_content method."""
 
   http_options: Optional[dict[str, Any]] = Field(
       default=None, description="""Used to override HTTP request options."""
@@ -2916,7 +2916,7 @@ class EmbedContentConfig(_common.BaseModel):
 
 
 class EmbedContentConfigDict(TypedDict, total=False):
-  """Class for configuring optional parameters for the embed_content method."""
+  """Optional parameters for the embed_content method."""
 
   http_options: Optional[dict[str, Any]]
   """Used to override HTTP request options."""
@@ -3118,7 +3118,7 @@ EmbedContentResponseOrDict = Union[
 
 
 class GenerateImageConfig(_common.BaseModel):
-  """Class that represents the config for generating an image."""
+  """The config for generating an image."""
 
   http_options: Optional[dict[str, Any]] = Field(
       default=None, description="""Used to override HTTP request options."""
@@ -3201,7 +3201,7 @@ class GenerateImageConfig(_common.BaseModel):
 
 
 class GenerateImageConfigDict(TypedDict, total=False):
-  """Class that represents the config for generating an image."""
+  """The config for generating an image."""
 
   http_options: Optional[dict[str, Any]]
   """Used to override HTTP request options."""
@@ -3272,7 +3272,7 @@ GenerateImageConfigOrDict = Union[GenerateImageConfig, GenerateImageConfigDict]
 
 
 class _GenerateImageParameters(_common.BaseModel):
-  """Class that represents the parameters for generating an image."""
+  """The parameters for generating an image."""
 
   model: Optional[str] = Field(
       default=None,
@@ -3292,7 +3292,7 @@ class _GenerateImageParameters(_common.BaseModel):
 
 
 class _GenerateImageParametersDict(TypedDict, total=False):
-  """Class that represents the parameters for generating an image."""
+  """The parameters for generating an image."""
 
   model: Optional[str]
   """ID of the model to use. For a list of models, see `Google models
@@ -3313,7 +3313,7 @@ _GenerateImageParametersOrDict = Union[
 
 
 class Image(_common.BaseModel):
-  """Class that represents an image."""
+  """An image."""
 
   gcs_uri: Optional[str] = Field(
       default=None,
@@ -3438,7 +3438,7 @@ JOB_STATES_ENDED = JOB_STATES_ENDED_VERTEX + JOB_STATES_ENDED_MLDEV
 
 
 class ImageDict(TypedDict, total=False):
-  """Class that represents an image."""
+  """An image."""
 
   gcs_uri: Optional[str]
   """The Cloud Storage URI of the image. ``Image`` can contain a value
@@ -3455,7 +3455,7 @@ ImageOrDict = Union[Image, ImageDict]
 
 
 class GeneratedImage(_common.BaseModel):
-  """Class that represents an output image."""
+  """An output image."""
 
   image: Optional[Image] = Field(
       default=None,
@@ -3471,7 +3471,7 @@ class GeneratedImage(_common.BaseModel):
 
 
 class GeneratedImageDict(TypedDict, total=False):
-  """Class that represents an output image."""
+  """An output image."""
 
   image: Optional[ImageDict]
   """The output image data.
@@ -3487,7 +3487,7 @@ GeneratedImageOrDict = Union[GeneratedImage, GeneratedImageDict]
 
 
 class GenerateImageResponse(_common.BaseModel):
-  """Class that represents the output image response."""
+  """The output image response."""
 
   generated_images: Optional[list[GeneratedImage]] = Field(
       default=None,
@@ -3497,7 +3497,7 @@ class GenerateImageResponse(_common.BaseModel):
 
 
 class GenerateImageResponseDict(TypedDict, total=False):
-  """Class that represents the output image response."""
+  """The output image response."""
 
   generated_images: Optional[list[GeneratedImageDict]]
   """List of generated images.
@@ -5697,7 +5697,7 @@ TuningExampleOrDict = Union[TuningExample, TuningExampleDict]
 
 
 class TuningDataset(_common.BaseModel):
-  """Supervised fine-tuning training dataset."""
+  """Supervised fune-tuning training dataset."""
 
   gcs_uri: Optional[str] = Field(
       default=None,
@@ -5710,7 +5710,7 @@ class TuningDataset(_common.BaseModel):
 
 
 class TuningDatasetDict(TypedDict, total=False):
-  """Supervised fine-tuning training dataset."""
+  """Supervised fune-tuning training dataset."""
 
   gcs_uri: Optional[str]
   """GCS URI of the file containing training dataset in JSONL format."""
@@ -6010,7 +6010,7 @@ _CreateDistillationJobParametersOrDict = Union[
 
 
 class CreateCachedContentConfig(_common.BaseModel):
-  """Class for configuring optional cached content creation parameters."""
+  """Optional configuration for cached content creation."""
 
   http_options: Optional[dict[str, Any]] = Field(
       default=None, description="""Used to override HTTP request options."""
@@ -6051,7 +6051,7 @@ class CreateCachedContentConfig(_common.BaseModel):
 
 
 class CreateCachedContentConfigDict(TypedDict, total=False):
-  """Class for configuring optional cached content creation parameters."""
+  """Optional configuration for cached content creation."""
 
   http_options: Optional[dict[str, Any]]
   """Used to override HTTP request options."""
@@ -7609,7 +7609,7 @@ UpscaleImageParametersOrDict = Union[
 
 
 class RawReferenceImage(_common.BaseModel):
-  """Class that represents a Raw reference image.
+  """A raw reference image.
 
   A raw reference image represents the base image to edit, provided by the user.
   It can optionally be provided in addition to a mask reference image or
@@ -7640,7 +7640,7 @@ class RawReferenceImage(_common.BaseModel):
 
 
 class RawReferenceImageDict(TypedDict, total=False):
-  """Class that represents a Raw reference image.
+  """A raw reference image.
 
   A raw reference image represents the base image to edit, provided by the user.
   It can optionally be provided in addition to a mask reference image or
@@ -7661,7 +7661,7 @@ RawReferenceImageOrDict = Union[RawReferenceImage, RawReferenceImageDict]
 
 
 class MaskReferenceImage(_common.BaseModel):
-  """Class that represents a Mask reference image.
+  """A mask reference image.
 
   This encapsulates either a mask image provided by the user and configs for
   the user provided mask, or only config parameters for the model to generate
@@ -7706,7 +7706,7 @@ class MaskReferenceImage(_common.BaseModel):
 
 
 class MaskReferenceImageDict(TypedDict, total=False):
-  """Class that represents a Mask reference image.
+  """A mask reference image.
 
   This encapsulates either a mask image provided by the user and configs for
   the user provided mask, or only config parameters for the model to generate
@@ -7734,7 +7734,7 @@ MaskReferenceImageOrDict = Union[MaskReferenceImage, MaskReferenceImageDict]
 
 
 class ControlReferenceImage(_common.BaseModel):
-  """Class that represents a Control reference image.
+  """A control reference image.
 
   The image of the control reference image is either a control image provided
   by the user, or a regular image which the backend will use to generate a
@@ -7779,7 +7779,7 @@ class ControlReferenceImage(_common.BaseModel):
 
 
 class ControlReferenceImageDict(TypedDict, total=False):
-  """Class that represents a Control reference image.
+  """A control reference image.
 
   The image of the control reference image is either a control image provided
   by the user, or a regular image which the backend will use to generate a
@@ -7809,7 +7809,7 @@ ControlReferenceImageOrDict = Union[
 
 
 class StyleReferenceImage(_common.BaseModel):
-  """Class that represents a Style reference image.
+  """A style reference image.
 
   This encapsulates a style reference image provided by the user, and
   additionally optional config parameters for the style reference image.
@@ -7852,7 +7852,7 @@ class StyleReferenceImage(_common.BaseModel):
 
 
 class StyleReferenceImageDict(TypedDict, total=False):
-  """Class that represents a Style reference image.
+  """A style reference image.
 
   This encapsulates a style reference image provided by the user, and
   additionally optional config parameters for the style reference image.
@@ -7878,7 +7878,7 @@ StyleReferenceImageOrDict = Union[StyleReferenceImage, StyleReferenceImageDict]
 
 
 class SubjectReferenceImage(_common.BaseModel):
-  """Class that represents a Subject reference image.
+  """A subject reference image.
 
   This encapsulates a subject reference image provided by the user, and
   additionally optional config parameters for the subject reference image.
@@ -7921,7 +7921,7 @@ class SubjectReferenceImage(_common.BaseModel):
 
 
 class SubjectReferenceImageDict(TypedDict, total=False):
-  """Class that represents a Subject reference image.
+  """A subject reference image.
 
   This encapsulates a subject reference image provided by the user, and
   additionally optional config parameters for the subject reference image.
@@ -8140,7 +8140,17 @@ class LiveClientSetup(_common.BaseModel):
   )
   generation_config: Optional[GenerationConfig] = Field(
       default=None,
-      description="""The generation configuration for the session.""",
+      description="""The generation configuration for the session.
+
+The following fields are supported:
+- `response_logprobs`
+- `response_mime_type`
+- `logprobs`
+- `response_schema`
+- `stop_sequence`
+- `routing_config`
+- `audio_timestamp`
+      """,
   )
   system_instruction: Optional[Content] = Field(
       default=None,
@@ -8168,7 +8178,17 @@ class LiveClientSetupDict(TypedDict, total=False):
       """
 
   generation_config: Optional[GenerationConfigDict]
-  """The generation configuration for the session."""
+  """The generation configuration for the session.
+
+The following fields are supported:
+- `response_logprobs`
+- `response_mime_type`
+- `logprobs`
+- `response_schema`
+- `stop_sequence`
+- `routing_config`
+- `audio_timestamp`
+      """
 
   system_instruction: Optional[ContentDict]
   """The user provided system instructions for the model.
@@ -8200,7 +8220,7 @@ class LiveClientContent(_common.BaseModel):
       description="""The content appended to the current conversation with the model.
 
       For single-turn queries, this is a single instance. For multi-turn
-      queries, this is a repeated field that contains conversation history +
+      queries, this is a repeated field that contains conversation history and
       latest request.
       """,
   )
@@ -8225,7 +8245,7 @@ class LiveClientContentDict(TypedDict, total=False):
   """The content appended to the current conversation with the model.
 
       For single-turn queries, this is a single instance. For multi-turn
-      queries, this is a repeated field that contains conversation history +
+      queries, this is a repeated field that contains conversation history and
       latest request.
       """
 
@@ -8242,16 +8262,17 @@ class LiveClientRealtimeInput(_common.BaseModel):
   """User input that is sent in real time.
 
   This is different from `ClientContentUpdate` in a few ways:
-  - Can be sent continuously without interruption the model generation.
-  - If there is a need to mix data interleaved across the
-    `ClientContentUpdate` and the `RealtimeUpdate`, server will attempt to
-    optimize for best response, but there are no guarantees.
-  - End of turn is not explicitly specified, but is rather derived from user
-    activity, e.g. end of speech.
-  - Even before the end of turn, the data will be processed incrementally
-    to optimize for a fast start of the response from the model.
-  - Is always assumed to be the user's input (cannot be used to populate
-    conversation history).
+
+    - Can be sent continuously without interruption to model generation.
+    - If there is a need to mix data interleaved across the
+      `ClientContentUpdate` and the `RealtimeUpdate`, server attempts to
+      optimize for best response, but there are no guarantees.
+    - End of turn is not explicitly specified, but is rather derived from user
+      activity (for example, end of speech).
+    - Even before the end of turn, the data is processed incrementally
+      to optimize for a fast start of the response from the model.
+    - Is always assumed to be the user's input (cannot be used to populate
+      conversation history).
   """
 
   media_chunks: Optional[list[Blob]] = Field(
@@ -8263,16 +8284,17 @@ class LiveClientRealtimeInputDict(TypedDict, total=False):
   """User input that is sent in real time.
 
   This is different from `ClientContentUpdate` in a few ways:
-  - Can be sent continuously without interruption the model generation.
-  - If there is a need to mix data interleaved across the
-    `ClientContentUpdate` and the `RealtimeUpdate`, server will attempt to
-    optimize for best response, but there are no guarantees.
-  - End of turn is not explicitly specified, but is rather derived from user
-    activity, e.g. end of speech.
-  - Even before the end of turn, the data will be processed incrementally
-    to optimize for a fast start of the response from the model.
-  - Is always assumed to be the user's input (cannot be used to populate
-    conversation history).
+
+    - Can be sent continuously without interruption to model generation.
+    - If there is a need to mix data interleaved across the
+      `ClientContentUpdate` and the `RealtimeUpdate`, server attempts to
+      optimize for best response, but there are no guarantees.
+    - End of turn is not explicitly specified, but is rather derived from user
+      activity (for example, end of speech).
+    - Even before the end of turn, the data is processed incrementally
+      to optimize for a fast start of the response from the model.
+    - Is always assumed to be the user's input (cannot be used to populate
+      conversation history).
   """
 
   media_chunks: Optional[list[BlobDict]]
