@@ -13,4 +13,4 @@
 # limitations under the License.
 #
 
-__version__ = '0.9.0' # x-release-please-version
+__version__ = '1.0.0rc0' # x-release-please-version

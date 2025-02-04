@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.9.0](https://github.com/googleapis/python-genai/compare/v0.8.0...v0.9.0) (2025-02-04)
+## [1.0.0rc0](https://github.com/googleapis/python-genai/compare/v0.8.0...v1.0.0rc0) (2025-02-04)
 
 
 ### Features
