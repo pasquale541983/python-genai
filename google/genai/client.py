@@ -94,6 +94,15 @@ class Client:
   Use this client to make a request to the Gemini Developer API or Vertex AI
   API and then wait for the response.
 
+  To initialise the client, users can provide required arguments either directly
+  or by using environment variables. For Gemini API users can provide API key by
+  providing input argument `api_key="your-api-key"` or by defining `GOOGLE_API_KEY="your-api-key"`
+  as an environment variable
+
+  Google Cloud users can provide inputs argument as `vertexai=false, project="your-project-id",
+   location="us-central1"` or by defining `GOOGLE_GENAI_USE_VERTEXAI=false`, `GOOGLE_CLOUD_PROJECT`
+   and `GOOGLE_CLOUD_LOCATION` environment variables.
+
   Attributes:
     api_key: The `API key <https://ai.google.dev/gemini-api/docs/api-key>`_ to
       use for authentication. Applies to the Gemini Developer API only.

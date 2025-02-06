@@ -277,9 +277,12 @@ class ApiClient:
             f'https://{self.location}-aiplatform.googleapis.com/'
         )
       self._http_options['api_version'] = 'v1beta1'
-    else:  # ML Dev API
+    else:  # Implicit initialization or missing arguments.
       if not self.api_key:
-        raise ValueError('API key must be set when using the Google AI API.')
+        raise ValueError('Missing key inputs argument!'
+                         '\n To use Google AI API, provide `api_key` arguments.'
+                         '\n To use Google Cloud API, provide `vertexai`, `project`, `location` arguments'
+                         )
       self._http_options['base_url'] = (
           'https://generativelanguage.googleapis.com/'
       )

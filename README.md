@@ -39,6 +39,32 @@ client = genai.Client(
 )
 ```
 
+**(Optional) Using environmental variables:**
+
+By setting the necessary environmental variables, users can create a client as follows
+
+```python
+client = genai.Client()
+```
+
+For Gemini API users, set `GOOGLE_API_KEY` as shown in below example
+```
+export GOOGLE_API_KEY='your-api-key'
+```
+
+For Google Cloud users, set `GOOGLE_GENAI_USE_VERTEXAI`, `GOOGLE_CLOUD_PROJECT`
+and `GOOGLE_CLOUD_LOCATION`, as shown in below example
+
+```
+export GOOGLE_GENAI_USE_VERTEXAI=false
+export GOOGLE_CLOUD_PROJECT='your-project-id'
+export GOOGLE_CLOUD_LOCATION='us-central1'
+```
+
+
+
+### API Selection
+
 To set the API version use `http_options`. For example, to set the API version
 to `v1` for Vertex AI:
 
