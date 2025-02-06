@@ -280,8 +280,8 @@ class ApiClient:
     else:  # Implicit initialization or missing arguments.
       if not self.api_key:
         raise ValueError('Missing key inputs argument!'
-                         '\n To use Google AI API, provide `api_key` arguments.'
-                         '\n To use Google Cloud API, provide `vertexai`, `project`, `location` arguments'
+                         '\n To use Google AI API, provide (`api_key`) arguments.'
+                         '\n To use Google Cloud API, provide (`vertexai`, `project` & `location`) arguments'
                          )
       self._http_options['base_url'] = (
           'https://generativelanguage.googleapis.com/'
